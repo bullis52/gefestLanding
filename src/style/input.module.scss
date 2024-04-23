@@ -1,0 +1,27 @@
+.input{
+  width: 450px;
+
+  &__short{
+    width: 215px;
+  }
+
+  &--wrap{
+    margin: 10px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &--error{
+    color: #f32f2f;
+  }
+
+  &__selectValue{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    max-width: 440px;
+    max-height: 20px;
+    overflow-x: auto;
+    z-index: -1;
+  }
+}

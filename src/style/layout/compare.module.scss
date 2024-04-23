@@ -1,0 +1,102 @@
+@import "../mixins";
+
+.modal{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 3;
+  width: 100%;
+  border-top: 4px solid #fb761f;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+
+  @include onTablet{
+    width: 360px;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 10px 0;
+
+    &--title{
+      padding-left: 5px;
+    }
+
+    &--left{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    transition: position 0.5s;
+  }
+
+  &__arrow{
+    &--top{
+      transform: rotate(180deg);
+    }
+
+    &--bottom{
+    }
+  }
+
+  &__item{
+    border-top: 1px solid #d9d6d6;
+    border-bottom: 1px solid #d9d6d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    &--left{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image--wrap{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__name{
+    padding-left: 10px;
+  }
+
+  &__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &--icon{
+      color: #1f2933;
+      border: 1px solid #cbd2d9;
+      flex-basis: 64px;
+      height: 35px;
+      padding: 5px;
+      border-radius: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #d2d0d0;
+      }
+    }
+  }
+}

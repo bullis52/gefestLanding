@@ -1,0 +1,102 @@
+@import "../mixins";
+
+.review{
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #d3d2d2;
+
+  &__nameBlock{
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__item{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d3d2d2;
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet{
+      flex-direction: row;
+    }
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  &__text{
+    //width: 150px;
+    word-wrap: break-word;
+
+    @include onTablet{
+      width: auto;
+    }
+  }
+
+  &__customer{
+    padding-right: 20px;
+    min-width: 190px;
+
+    &--verified{
+      display: flex;
+      align-items: center;
+    }
+
+    &--name{
+      font-weight: 500;
+      margin-top: 5px;
+      font-size: 17px;
+    }
+  }
+
+  &__block{
+    border-bottom: #d3d2d2 solid 1px;
+    padding-bottom: 20px;
+
+    @include onTablet{
+      border-left: #d3d2d2 solid 1px;
+      padding-left: 20px;
+    }
+
+    &--name{
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    &--text{
+      font-weight: 100;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    &--termin{
+      font-weight: 100;
+    }
+
+    &--impact{
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.loader__list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 300px;
+
+  @include onSDesktop{
+    width: 94.2vw;
+    height: 40vh;
+  }
+}
+

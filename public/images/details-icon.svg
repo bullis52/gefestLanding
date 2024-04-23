@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path fill="#035271" class="bde-icon-details-cls-1" d="M310,454H290a2,2,0,0,1-2-2V436a2,2,0,0,1,2-2h20a2,2,0,0,1,2,2v16A2,2,0,0,1,310,454Zm-20-18v16h20l0-16Z" transform="translate(-288 -434)"></path>
+  <g fill="#1b6ec2" transform="translate(3.307 5.38)">
+    <path fill="#035271" class="bde-icon-details-cls-1" d="M295.421,448.783l-4.114-2.743,1.387-2.08,1.886,1.257,3.336-5.837,2.171,1.24Z" transform="translate(-291.307 -439.38)"></path>
+  </g>
+  <g fill="#1b6ec2" transform="translate(14 7)">
+    <rect fill="#035271" class="bde-icon-details-cls-1" width="6" height="2" transform="translate(0 0)"></rect>
+  </g>
+  <g fill="#1b6ec2" transform="translate(14 11)">
+    <rect fill="#035271" class="bde-icon-details-cls-1" width="6" height="2" transform="translate(0 0)"></rect>
+  </g>
+</svg>

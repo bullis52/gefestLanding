@@ -1,0 +1,63 @@
+export interface PhoneSpecifications {
+  Akkukapazität: string[];
+  Aktualität: string[];
+  Anschlüsse: string[];
+  'Anzahl Prozessorkerne': string[];
+  Arbeitsspeicher: string[];
+  'Auflösung Frontkamera': string[];
+  Bauform: string[];
+  Betriebssystem: string[];
+  Betriebssystemfamilie: string[];
+  Bildwiederholfrequenz: string[];
+  Brands: string[];
+  Breite: string[];
+  Dateiformate: string[];
+  Datenübertragung: string[];
+  'Display-Auflösung': string[];
+  'Display-Diagonale': string[];
+  'Display-Typ': string[];
+  'Drahtlose Schnittstellen': string[];
+  Eigenschaften: string[];
+  'Eingabe per': string[];
+  Farbe: string[];
+  Frequenzband: string[];
+  Funktionen: string[];
+  Gewicht: string[];
+  Herstellerfarbe: string[];
+  Höhe: string[];
+  'Integrierte Komponenten': string[];
+  'Integrierter Speicher': string[];
+  Kameraauflösung: string[];
+  'Max. digitaler Zoom': string[];
+  'Max. optischer Zoom': string[];
+  'Mitgeliefertes Zubehör': string[];
+  Netzteil: string[];
+  Pixeldichte: string[];
+  Prices: number[];
+  Produktlinie: string[];
+  Produkttyp: string[];
+  Prozessor: string[];
+  Prozessortaktfrequenz: string[];
+  'SIM-Kartenleser': string[];
+  Schutzart: string[];
+  Sprachassistent: string[];
+  Tiefe: string[];
+  Videoauflösung: string[];
+  Videoformate: string[];
+}
+
+export interface IFilters {
+  page: number;
+  brands: string;
+  category: string | undefined;
+  minPrice: number;
+  maxPrice: number;
+  color: string;
+  os: string;
+  diagonal: string;
+  integratedMemory: string;
+  camera: string;
+  operationMemory: string;
+  frontCamera: string;
+  deals: boolean;
+}

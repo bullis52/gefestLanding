@@ -1,0 +1,157 @@
+@import 'style/container.module';
+@import 'style/mixins';
+@import 'style/variables';
+
+.burgerMenu {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  left: 0;
+  z-index: 15;
+  display: block;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: $color-black;
+  transform: translateX(-130%);
+  transition: all 0.5s;
+
+  @include onSDesktop {
+    display: none;
+  }
+
+  &__active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(0);
+    transition: transform 0.5s;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 40px 20px;
+    overflow-x: hidden;
+
+    @include onTablet {
+      flex-direction: row;
+      min-height: calc(100vh - 680px);
+      padding: 40px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include onTablet {
+      width: 40%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__title {
+    color: $color-purple;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+
+    &--new {
+      padding-left: 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  &__listItem {
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+
+    &-title {
+      color: $color-black;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    &-social {
+      display: flex;
+      gap: 25px;
+    }
+
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-link {
+      color: $color-purple;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 140%;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 17px;
+    right: -23px;
+    z-index: -1;
+  }
+
+  &__new {
+    position: absolute;
+    top: -13px;
+    left: -4px;
+    width: 35px;
+    height: 35px;
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    @include onDesktop {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "swiper/swiper.module";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 19px;
+  background-color: rgb(245, 247, 250);
+  counter-reset: sections 0;
+  height: 100vh;
+  margin: 0px;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+  font-family: Arial,sans-serif;
+}
+
+.container{
+  max-width: 1140px;
+}
+
+//input[type=checkbox]{
+//  height: 0;
+//  width: 0;
+//  visibility: hidden;
+//}
+
+.MuiTextField-root {
+  background: #fff !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+
+.scroll-to-product-info {
+  scroll-behavior: smooth !important;
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: rgb(255, 255, 255) !important;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  padding: 14px 10px !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  padding: 9px 10px !important;
+}
+
+.MuiInputBase-input{
+  padding: 14px 10px !important;
+}
+
+.MuiBackdrop-root{
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.MuiModal-backdrop{
+  background-color: rgb(255, 255, 255) !important;
+}
+
+h4{
+  margin: 10px 0 !important;
+}
+
+

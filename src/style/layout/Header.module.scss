@@ -1,0 +1,359 @@
+@import "../mixins";
+
+.header{
+  &__top {
+    height: 40px;
+    background: linear-gradient(180deg, rgba(3,82,113,1) 0%, rgba(4,62,84,1) 100%);
+  }
+  &__bottom{
+    height: 226px;
+    background: linear-gradient(180deg, rgb(77, 134, 161) 0%, rgb(4, 115, 154) 100%);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+
+    @include onSDesktop{
+      height: 96px;
+      padding-top: 0;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+
+      @include onSDesktop{
+        flex-direction: row;
+      }
+    }
+  }
+  &__bottomWrap{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+
+    @include onSDesktop{
+      justify-content: space-between;
+    }
+  }
+
+  &__bottomImgWrap {
+    padding-left: 50px;
+  }
+
+  &__mobile{
+    &--wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.menuList{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    color: #fff;
+    padding: 0 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  &__itemText {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.search{
+  margin-left: 0;
+  margin-top: 20px;
+
+  @include onSDesktop{
+    margin-left: 60px;
+    margin-top: 0;
+  }
+
+  &__input{
+    padding: 10px;
+    width: 500px;
+    border-radius: 20px;
+    border:none;
+  }
+}
+
+.action{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include onSDesktop {
+    margin-left: 60px;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 15px 5px 10px;
+
+    @include onSDesktop {
+      padding: 0;
+    }
+
+    &:hover{
+      background-color: #043e54;
+      text-decoration: none;
+      border-radius: 50px;
+    }
+
+
+    &:first-child{
+      margin-right: 0;
+
+      @include onSDesktop {
+        margin-right: 40px;
+      }
+
+    }
+    &:last-child {
+      @include onTablet {
+        //padding: 5px 50px 5px 10px;
+      }
+    }
+  }
+  &__icon{
+    display: flex;
+    background-color: #043e54;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text{
+    font-size: 1.1428571429em;
+    color: #fff;
+    margin-left: 9px;
+    width: 111px;
+  }
+
+  &__text2{
+    font-size: 1.1428571429em;
+    color: #fff;
+    margin-left: 9px;
+    width: 107px;
+  }
+
+  &__text3{
+    font-size: 1.1428571429em;
+    color: #fff;
+    margin-left: 9px;
+    width: 99px;
+  }
+
+  &__favorites--count{
+    position: absolute;
+    top: 0;
+    right: -5px;
+    font-size: .7142857143em;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #fb761f;
+  }
+}
+
+.registration{
+  position: absolute;
+  top: -30px;
+  right: -2.5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  padding: 20px;
+
+  @include onSDesktop{
+    position: absolute;
+    top: 70px;
+    left: 27px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    width: 335px;
+    height: 400px;
+    z-index: 3;
+    padding: 20px;
+  }
+
+  &::after{
+    bottom: 100%;
+    left: 70%;
+    border: solid transparent;
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 10px;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &__title{
+  }
+
+  &__image{
+    cursor: pointer;
+  }
+
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__remind{
+    font-size: .8571428571em;
+    cursor: pointer;
+  }
+
+  &__forgot{
+    font-size: .8571428571em;
+    color: #1b6ec2;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__register{
+    font-size: .8571428571em;
+    color: #1b6ec2;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.logged{
+  position: absolute;
+  top: -30px;
+  right: -2.5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  padding: 20px;
+
+  @include onSDesktop{
+    position: absolute;
+    top: 70px;
+    left: 27px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    width: 335px;
+    height: 300px;
+    z-index: 3;
+    padding: 20px;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &__title{
+  }
+
+  &__image{
+    cursor: pointer;
+  }
+
+  &__menu{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+
+    &--bottom{
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #bbb9b9;
+      padding-top: 10px;
+    }
+
+    &--item{
+      padding: 5px 0;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.modal{
+  width: 270px;
+  height: 350px;
+  position: absolute;
+  top: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  @include onSDesktop {
+    width: 570px;
+    height: 350px;
+  }
+
+  &--wrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__close{
+    margin: 20px;
+    cursor: pointer;
+  }
+
+}
+
+

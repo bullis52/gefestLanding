@@ -1,0 +1,72 @@
+@import '../mixins';
+@import '../variables';
+
+
+html, body {
+  & .swiper-wrapper {
+    display: flex;
+  }
+
+  & .swiper-slide {
+    width: fit-content;
+  }
+
+  & .swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  &  > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 90px;
+
+    @include onTablet {
+      padding-right: 90px;
+    };
+  }
+
+  & .swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  & .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    color: black;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: $color-light-gray;
+    opacity: 1;
+  }
+
+  & .swiper-pagination-bullet-active {
+    width: 26px;
+    height: 10px;
+    color: #fff;
+    background: $color-blue;
+    border-radius: 10px;
+    animation: activate 0.2s linear;
+
+    @keyframes activate {
+      0% {
+        width: 10px;
+        background: $color-light-gray;
+      }
+
+      100% {
+        width: 26px;
+        background: $color-blue;
+      }
+    }
+  }
+}
+
+
+
+
+

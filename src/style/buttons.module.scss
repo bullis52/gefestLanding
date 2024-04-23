@@ -1,0 +1,59 @@
+.button__prev {
+  left: 1%;
+
+  &::after {
+    content: 'prev';
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    border: 1px solid #666;
+  }
+}
+
+.button__next {
+  position: relative;
+  right: 1%;
+
+  &::after {
+    content: 'next';
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    border: 1px solid #666;
+  }
+}
+
+
+.button__prev, .button__next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+
+  &::after {
+    font-family: swiper-icons;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+  }
+}

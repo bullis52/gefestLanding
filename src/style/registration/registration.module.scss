@@ -1,0 +1,113 @@
+@import "../mixins";
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.registration{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+  width: 600px;
+  min-height: 700px;
+  z-index: 3;
+  padding: 20px;
+
+  &::after{
+    bottom: 100%;
+    left: 70%;
+    border: solid transparent;
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 10px;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 1.7142857143em;
+    padding: 25px 0 15px;
+    line-height: 24px;
+  }
+
+  &__image{
+    cursor: pointer;
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    max-width: 300px;
+
+    @include onTablet{
+      max-width: 520px;
+    }
+
+    &--login{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 300px;
+
+      @include onTablet{
+        width: 520px;
+      }
+    }
+  }
+
+  &__remind{
+    display: flex;
+    align-items: center;
+    font-size: .8571428571em;
+    cursor: pointer;
+  }
+
+  &__forgot{
+    font-size: .8571428571em;
+    color: #1b6ec2;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__register{
+    font-size: .8571428571em;
+    color: #1b6ec2;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__button{
+    width: 300px;
+
+    @include onTablet{
+      width: 520px;
+    }
+  }
+
+  &__err{
+    color: #f32f2f;
+  }
+}

@@ -1,0 +1,27 @@
+.list{
+  margin: 10px;
+  overflow: auto;
+  height: 100vh;
+  position: relative;
+
+  &__swiper{
+    background-color: #fff;
+    position: static;
+  }
+
+  &__empty{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+    &--text{
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+  &__wrap{
+    position: relative;
+  }
+}
+

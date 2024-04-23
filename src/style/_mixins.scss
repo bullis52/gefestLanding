@@ -1,0 +1,75 @@
+@mixin onDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin onSDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onMobile_360 {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin onMobile_375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin onMobile_390 {
+  @media (max-width: 390px) {
+    @content;
+  }
+}
+
+@mixin onMobile_393 {
+  @media (max-width: 393px) {
+    @content;
+  }
+}
+
+@mixin onMobile_412{
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin onMobile_414{
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin defaultText($font-size, $color) {
+  color: $color;
+  font-weight: 600;
+  font-size: $font-size;
+  line-height: 160%;
+}
+
+@mixin boldText($font-size, $color) {
+  color: $color;
+  font-weight: 700;
+  font-size: $font-size;
+  line-height: 160%;
+}
+
+@mixin thinText($font-size, $color) {
+  color: $color;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: 160%;
+}
+

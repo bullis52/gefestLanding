@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24">
+  <defs>
+    <style>
+      .a {
+      fill: #fff;
+      }
+    </style>
+  </defs>
+  <g transform="translate(-0.927)">
+    <circle class="a" cx="6" cy="6" r="6" transform="translate(6)"></circle>
+    <path class="a" d="M12,13C6.743,13,2.67,15.149.927,18.534a13.949,13.949,0,0,0,22.146,0C21.33,15.149,17.257,13,12,13Z"></path>
+  </g>
+</svg>
